@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        img{
+            width: 100%;
+            height: 300px;
+            border-radius: 20px;
+        }
+        .container{
+            height: 80%;
+        }
+    </style>
+</head>
+<body>
+    <div class=" container w-50 mt-5 border border-5 border-warning ">
+        <h1 class=" text-center text-success text-capitalize fw-bold mt-3">selected flags</h1>
+        <select id="select" onchange="Flag()" class=" form-control">
+            <option value="Country">Country:</option>
+            <option value="Cambodia">Cambodia</option>
+            <option value="Vietnam">Vietnam</option>
+            <option value="Thailand">Thailand</option>
+            <option value="USA">USA</option>
+            <option value="Lao">Lao</option>
+        </select>
+             <div class=" mt-2">
+                <h5>country: <span class="name"></span></h5>
+                <img width="100%" height="100%" src="" alt="">
+            </div>
+    </div>
+</body>
+<script>
+    let select = document.getElementById("select");
+    function Flag(){
+        if(select.value === "Country"){
+            var name = "Country";
+            document.querySelector(".name").innerHTML = name;
+            document.querySelector("img").src = "https://www.bergerpaints.com/imaginecolours/wp-content/uploads/2016/09/flags-of-the-world.png";
+        }
+        if(select.value === "Cambodia"){
+            var name = "Cambodia";
+            document.querySelector(".name").innerHTML = name;
+            document.querySelector("img").src = "https://media.istockphoto.com/id/1063896886/vector/flag-of-cambodia.jpg?s=612x612&w=0&k=20&c=Ts8iG6X0JOVXowAOU8V-YvCBZ7Q2BZZxPilqrZwX1Ys=";
+        } else if(select.value === "Vietnam"){
+            var name = "Vietname";
+            document.querySelector(".name").innerHTML = name;
+            document.querySelector("img").src = "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Vietnam.svg/800px-Flag_of_Vietnam.svg.png";
+        } else if(select.value === "Thailand"){
+            var name = "Thailand";
+            document.querySelector(".name").innerHTML = name;
+            document.querySelector("img").src = "https://cdn.britannica.com/38/4038-004-111388C2/Flag-Thailand.jpg";
+        } else if(select.value === "USA"){
+            var name = "USA";
+            document.querySelector(".name").innerHTML = name;
+            document.querySelector("img").src = "https://cdn.britannica.com/33/4833-004-828A9A84/Flag-United-States-of-America.jpg";
+        } else if(select.value ==="Lao"){
+            var name = "Lao";
+            document.querySelector(".name").innerHTML = name;
+            document.querySelector("img").src = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Flag_of_Laos.svg/255px-Flag_of_Laos.svg.png";
+        }
+       
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</html>

@@ -8,11 +8,11 @@
 <body>
    <div class=" container w-50 border border-danger rounded mt-3 p-3">
         <h1 class=" text-center text-danger">Searching to uppercase</h1>
-        <input id="input" type="text" class=" form-control" onchange="mychange()">
+        <input id="input" type="text" class=" form-control" onchange="myChange()">
    </div> 
 </body>
 <script>
-    function mychange(){
+    function myChange(){
         let x = document.getElementById("input");
         x.value = x.value.toUpperCase();
     }
